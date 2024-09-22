@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YULIN WU Portfolio</title>
+    <style>
+        
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: #2c3e50;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s, padding-left 0.3s;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background: #34495e;
+    padding-left: 25px;
+}
+
+main {
+    margin:0;
+    margin-left: 200px;
+    padding: 0 10px;
+}
+
+.header-image {
+    background: url('pic/header.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.header-text .name {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.header-text .desc {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.line {
+    border: 0;
+    height: 2px;
+    background: #fff;
+    margin: 10px 0;
+    width: 100%;
+    min-width: 100px;
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: 5%; 
+    transform: translateX(-50%); 
+    font-size: 2em;  
+    color:black;  
+}
+
+.down-arrow a {
+    text-decoration: none;  
+    transition: color 0.3s ease; 
+    color: white;
+}
+
+.down-arrow a:hover {
+    color: yellow; 
+}
+
+#about-me {
+    display: flex;
+    justify-content: space-between;
+     margin: 50px;
+        }
+
+.about-content {
+    flex: 3;
+     margin-right: 50px;
+        }
+
+.contact-section {
+    flex: 1;
+    border-left: 2px solid #ccc;
+    padding-left: 50px;
+        }
+
+.contact-image {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+            
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    border-left: 3px solid #333;
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+
+
+.div-intro1, .div-intro2, .div-intro3 {
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1.2em;
+}
+
+.div-intro1 {
+    border-left: 5px solid #3498db;
+}
+
+.div-intro2 {
+    border-left: 4px solid #e67e22;
+}
+
+.div-intro3 {
+    border-left: 3px solid #2ecc71;
+}
+
+.div-intro1:first-child, .div-intro2:first-child, .div-intro3:first-child {
+    margin-top: 20px;
+}
+
+
+#project-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-content {
+    flex: 2;
+    padding: 20px;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+#phase-a {
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    line-height: 1.6;     
+}
+#phase-a .heading-style {
+    position: relative;
+    display: inline-block;
+    text-align: center;  
+    font-weight: 600; 
+}
+
+#phase-a .heading-style::before, 
+#phase-a .heading-style::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#phase-a .heading-style::before {
+    left: -60px;
+}
+
+#phase-a .heading-style::after {
+    right: -60px;
+}
+h3 {
+    border-bottom: 3px solid #273c75; 
+    padding-bottom: 15px;
+    font-weight: 700;
+    display: inline-block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+#phase-a h3 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333; 
+}
+#phase-a p {
+    margin-bottom: 25px;
+    color: #34495e;    
+}
+
+#phase-a img {
+    max-width: 60%;
+    display: block;
+    margin: 25px auto;    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  /
+}
+
+button.togglePosterBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    max-width:20% ;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.togglePosterBtn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+
+.hiddenContent {
+    display: none;
+}
+
+.idea-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.idea-section img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+.idea-section p {
+    margin-top: 15px;
+    line-height: 1.5;
+    max-width: 100%; 
+}
+
+.idea-section p b {
+    font-weight: 600;
+}
+
+.idea-section ul {
+    list-style-type: none;
+    padding-left: 30px;
+    border-left: 4px dashed #3498db; 
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #f4f6f6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+}
+
+.idea-section ul:hover {
+    transform: scale(1.02); 
+}
+
+.idea-section li {
+    padding: 10px 0;
+    position: relative;
+    transition: background-color 0.3s; 
+}
+
+.idea-section li:before {
+    content: "\2713"; 
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db; 
+}
+
+.idea-section li:hover {
+    background-color: #ecf0f1; 
+    cursor: pointer;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.carousel-image {
+    display: flex;
+    flex: 0 0 auto; 
+    max-width:800px;  
+    max-height:100%;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.btn-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 10;  
+    text-align: initial;
+}
+
+.carousel button.leftArrow { 
+    left: 10px;  
+}
+
+.carousel button.rightArrow { 
+    right: 10px; 
+}
+
+
+.proposaltext {
+    max-width: 750px;
+    margin: 10px auto;
+    color: #333;
+    background-color: lightpink;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 40px 50px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;  
+}
+
+.proposaltext::before, 
+.proposaltext::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #333, transparent);  
+}
+
+.proposaltext::after {
+    bottom: 0;
+    top: auto;
+}
+
+.proposaltext p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.parent-element {
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;  
+}
+.disContent{
+    text-align: justify;  
+}
+.idea-section {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+}
+
+
+.idea-section p {
+    margin-bottom: 15px;
+    color: #666; 
+    line-height: 1.5;
+    
+}
+
+.idea-section img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.idea-section b {
+    font-weight: bold;
+    color: #444;
+}
+
+.idea-section ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.idea-section li {
+    margin-bottom: 10px;
+}
+
+#phase-b {
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    line-height: 1.6;     
+}
+#phase-b .heading-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#phase-b .heading-style::before, 
+#phase-b .heading-style::after {
+    content: "";
+    height: 1px;
+    width: 50px;
+    background-color: #000;
+    margin: 0 10px;
+}
+
+
+#phase-b .heading-style::before {
+    left: -60px;
+}
+
+#phase-b .heading-style::after {
+    right: -60px;
+}
+
+#phase-b h3 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333; 
+    text-align: right;
+}
+#phase-b p {
+    margin-bottom: 25px;
+    color: #34495e;      
+}
+
+#phase-b img {
+    max-width: 60%;
+    display: block;
+    margin: 25px auto;  
+    z-index:1 ;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  /
+}
+.project-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    flex-direction: column;
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+#lightboxdisplay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#lightboximage {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+
+.image-stack {
+    display: flex;
+    justify-content: space-between; 
+    width: 800px;  
+    margin: auto;
+}
+
+.image-stack img {
+    width: 50%;  
+    object-fit: cover;
+    border-radius: 5px;  
+    border: 1px solid #ddd;  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease,z-index 0.3s ease;
+
+}
+.image-stack img:hover {
+    transform: scale(2); 
+  
+}
+#firstImage:hover {
+    z-index: 2; 
+}
+
+#secondImage {
+    z-index: 1; 
+}
+
+.project-contribution {
+    border: none;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    line-height: 1.8;
+    color: #29303b;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-contribution:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.project-contribution p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.project-contribution b, .project-contribution strong {
+    color: #1e272e;
+    font-weight: 700;
+}
+
+.project-contribution p:first-child {
+    margin-top: 0;
+}
+.feedback-response {
+    max-width: 800px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-response-header {
+    color: #444;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 15px;
+}
+
+.feedback-highlight {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.feedback-response p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feedback-details {
+    margin: 30px 0;
+}
+
+.feedback-details li {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+#phase-c {
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    line-height: 1.6;     
+}
+#phase-c h3 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333; 
+}
+#phase-c .heading-style {
+    position: relative;
+    display: inline-block;
+    text-align: center;  
+    font-weight: 600; 
+}
+
+#phase-c .heading-style::before, 
+#phase-c .heading-style::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#phase-c .heading-style::before {
+    left: -60px;
+}
+
+#phase-c .heading-style::after {
+    right: -60px;
+}
+
+
+#phase-c p {
+    margin-bottom: 25px;
+    color: #34495e;      
+}
+
+#phase-c ul {
+    list-style-type: none;
+    padding-left: 30px;
+    border-left: 4px dashed #3498db; 
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #f4f6f6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+}
+
+#phase-c ul:hover {
+    transform: scale(1.02); 
+}
+
+#phase-c li {
+    padding: 10px 0;
+    position: relative;
+    transition: background-color 0.3s; 
+}
+
+#phase-c li:before {
+    content: "\2713"; 
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db; 
+}
+
+#phase-c li:hover {
+    background-color: #ecf0f1; 
+    cursor: pointer;
+}
+.project-deliverables {
+    text-align: center; 
+    display: block; 
+}
+
+
+
+.comparison-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.before, .after {
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.before img, .after img {
+    max-width: 300px;
+    cursor: pointer; 
+}
+
+.before:hover, .after:hover {
+    transform: scale(2); 
+}
+.emoji-arrow {
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.arrow:hover {
+    visibility: visible;
+    opacity: 1;
+}
+.feedback-description {
+    text-align: justify;
+    color: #555;
+    margin-top: 20px;
+}
+
+.code-container {
+    max-width: 100%;  
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.code-container p{
+    text-align: justify;
+}
+.img-wrapper {
+    display: flex;
+    justify-content: center;  
+    margin-bottom: 15px;
+}
+
+.img-container {
+    max-width: 80%; 
+    max-height: 80%; 
+    position: relative;
+}
+
+.code-image {
+    max-width: 80%;
+    height: auto;
+    margin: 10px 0;
+}
+
+
+.difficulty-label.medium {
+    background-color: #FFD700;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.code-description {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.tradeshow-highlight {
+    max-width: 100%;  
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.tradeshow-highlight h2.heading-style {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.tradeshow-highlight img {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+.tradeshow-highlight p {
+    line-height: 1.5;
+    color: #333;
+    margin: 10px 0;
+    text-align: justify;
+    
+}
+.demo-highlight {
+    max-width: 100%;  
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.partc-reflect p{
+    text-align:justify;
+}
+#portfolio {
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    line-height: 1.6;     
+}
+#portfolio h3 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333; 
+    text-align: right; 
+}
+#portfolio .heading-style {
+    position: relative;
+    display: inline-block;
+    text-align: center;  
+    font-weight: 600; 
+}
+
+#portfolio .heading-style::before, 
+#portfolio .heading-style::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#portfolio .heading-style::before {
+    left: -60px;
+}
+
+#portfolio .heading-style::after {
+    right: -60px;
+}
+
+
+#portfolio p {
+    margin-bottom: 25px;
+    color: #34495e;      
+}
+
+#portfolio ul {
+    list-style-type: none;
+    padding-left: 30px;
+    border-left: 4px dashed #3498db; 
+    margin-top: 20px;
+    font-size: 16px;
+    max-width: 100%;
+    background-color: #f4f6f6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+}
+
+#portfolio ul:hover {
+    transform: scale(1.02); 
+}
+
+#portfolio li {
+    padding: 10px 0;
+    position: relative;
+    transition: background-color 0.3s; 
+}
+
+#portfolio li:before {
+    content: "\2713"; 
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db; 
+    font-size: 18px;
+}
+
+#portfolio li:hover {
+    background-color: #ecf0f1; 
+    cursor: pointer;
+}
+
+.portfolio-ideation{
+    text-align: center; 
+    display: block; 
+}
+.reflection p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#course-reflection {
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    line-height: 1.6;     
+}
+#course-reflection h3 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333; 
+    text-align: left; 
+}
+#course-reflection .heading-style {
+    position: relative;
+    display: inline-block;
+    text-align: center;  
+    font-weight: 600; 
+}
+
+#course-reflection .heading-style::before, 
+#course-reflection .heading-style::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#course-reflection .heading-style::before {
+    left: -60px;
+}
+
+#course-reflection .heading-style::after {
+    right: -60px;
+}
+
+
+#course-reflection p {
+    margin-bottom: 25px;
+    color: #34495e;      
+}
+
+#course-reflection ul {
+    list-style-type: none;
+    padding-left: 30px;
+    border-left: 4px dashed #3498db; 
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #f4f6f6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+}
+
+#course-reflection ul:hover {
+    transform: scale(1.02); 
+}
+
+#course-reflection li {
+    padding: 10px 0;
+    position: relative;
+    transition: background-color 0.3s; 
+}
+
+#course-reflection li:before {
+    content: "\2713"; 
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db; 
+}
+
+#course-reflection li:hover {
+    background-color: #ecf0f1; 
+    cursor: pointer;
+}
+
+.final-reflection {
+    border: none;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    line-height: 1.8;
+    color: #29303b;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.final-reflection:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.final-reflection p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.final-reflection b, .final-reflection strong {
+    color: #1e272e;
+    font-weight: 700;
+}
+
+.final-reflection p:first-child {
+    margin-top: 0;
+}
+.image-wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resized-image {
+    width:300px;
+    height: 400px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+#Reference{
+    width: 80%;              
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;   
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    }
+
+.reference-section h3 {
+font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #333; 
+    text-align: right; 
+}
+
+.reference-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reference-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reference-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+
+<body>
+  <!-- Sidebar navigation section -->
+<aside class="sidebar">
+    <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#project-info">Project Info</a></li>
+        <li><a href="#phase-a">Part A</a></li>
+        <li><a href="#phase-b">Part B</a></li>
+        <li><a href="#phase-c">Part C</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#course-reflection">Course Reflection</a></li>
+        <li><a href="#Reference">Reference</a></li>
+    </ul>
+</aside>
+
+<main>
+<!-- Main landing section of the website with a header image and introductory text -->
+<section id="index">
+    <!-- Visual header element with background image -->
+    <div class="header-image">
+        <!-- Overlaying text block with name and description -->
+        <div class="header-text">
+            <!-- Displaying the individual's name -->
+            <span class="name">YULIN WU</span>
+            <!-- Decorative line to separate name from description -->
+            <hr class="line">
+            <!-- Brief description indicating this is a portfolio page for the year 2023 -->
+            <span class="desc">PORTFOLIO - 2023</span>
+        </div>
+        <!-- Navigation aid: an arrow prompting users to scroll or click to proceed to the next section -->
+        <div class="down-arrow">
+            <a href="#about-me">↓</a> <!-- Arrow symbol acting as a link to the 'About Me' section -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Section containing information about the individual and their contact details -->
+<section id="about-me">
+    <!-- Container for the 'About Me' content -->
+    <div class="about-content">
+        <!-- Title for the 'About Me' section -->
+        <h1>ABOUT ME</h1>
+        <!-- First introductory paragraph detailing educational background and passion -->
+        <div class="div-intro1">
+            I'm pursuing my postgraduate studies in IT at the University of Queensland, with a deep-seated passion for web design and development.
+        </div>
+        
+        <!-- Second introductory paragraph focusing on the creative potential of web design -->
+        <div class="div-intro2">
+            The realm of web design offers vast potential for creativity, and with its inherent flexibility, it paves the way for unparalleled creative freedom. Embracing this mindset, I strive to amalgamate these principles in my endeavors.
+        </div>
+        
+        <!-- Third introductory paragraph expressing personal aims and dedication to coursework -->
+        <div class="div-intro3">
+            While I aim to bring forth my contributions and reflections in the DECO7180 course, it's equally important to me to put forth my utmost effort in every project.
+        </div>
+    </div>
+    <!-- Contact information section with an image and details -->
+    <div class="contact-section">
+        <!-- Image representing the individual -->
+        <img src="pic/yulin wu.png" alt="Yulin Wu" class="contact-image">
+        <h1>CONTACT ME</h1>
+        <p>Feel free to contact me if you have any questions or requests</p>
+        <p><strong>EMAIL:</strong> jasonwu940@outlook.com</p>
+    </div>
+</section>
+
+        
+<!-- Section dedicated to providing an overview of the project "Poach Park Locator" -->
+<section id="project-info">
+    <!-- Heading indicating the start of the project brief -->
+    <h2>Project Brief</h2>
+    <!-- Container for the project's logo or representative image -->
+    <div class="project-image">
+        <img src="pic/logo.png" alt="Project Image"> <!-- Image of the project's logo -->
+    </div>
+    <!-- Textual content describing the project in detail -->
+    <div class="project-content">
+        <!-- The title of the project -->
+        <h1>Poach Park Locator</h1> 
+        <!-- Description of the project, its functionality, data sources, and unique value proposition -->
+        <p>Poach Park Locator is an innovative web-based application crafted specifically for dog enthusiasts and owners aiming enhancing their outdoor experiences. 
+            By merely inputting a locality name or postal code, users gain the ability to not only pinpoint neighboring dog-friendly parks but also delve into intricate park details, firsthand forum of user reviews, and ratings. 
+            Moreover, the application stands out by offering tailored recommendations based on park renown. 
+            Vital information feeding this platform originates from reliable sources such as the government's Open Data API, Google APIs, and genuine user forum contributions, guaranteeing both accuracy and real-time updates.
+        </p>
+    </div>
+</section>
+
+<!-- Section outlining the first phase of the project, Part A -->
+<section id="phase-a">
+    <!-- Title for the Part A section -->
+    <h3>Part A </h3>
+    <!-- Description of personal role and responsibilities in the project's web development phase -->
+    <p>
+        In this project, my main responsibility is web development. I have previous experience with web development courses.
+        After discussions with me from other team members, I became the team leader and took the lead in the main direction of web development.
+        During the initial design phase, my main responsibility was to organize everyone's tasks and conduct search and research to identify target user groups and data sources.
+    </p>
+    <img src="pic/team role.png" alt="task chosen">
+    <div class="parent-element">
+        <div class="idea-section">
+            <!-- Heading for Idea Development section -->
+            <h2 class="heading-style">Idea Development</h2>
+            <p>
+                The original idea for a team project was a dog park finder project on my personal poster part.<br>
+                My main idea as a personal poster was to help dog owners in Brisbane, especially those unfamiliar with the near parks.
+            </p>
+            <img src="pic/poster.png" alt="ideaposter">
+            <p>
+                <b>Initial Concept:</b> Users can inquire about the nearby dog park and check the facilities.<br>
+                <b>Inspiration:</b> Inspired by parkbuddies, enter the area name to view dog parks.<br>
+                <b>Brainstorming Approach:</b> Team members actively pitched concepts and ideas.<br>
+                We used brainstorming cards to try and find a unique but at the same time practical angle.
+                <!-- List of brainstorming ideas -->
+                <ul>
+                    <li>A forum for communication between dog owners.</li>
+                    <li>Find more data sources such as pet-friendly areas, pet-friendly shopping malls.</li>
+                    <li>Recommend the most popular and hot parks.</li>
+                </ul>
+                <img src="pic/brainstorm.png" alt="brainstorm">
+                <b>Final Decision:</b><p> After many discussions and evaluations, we settled on our idea and the functionality we wanted to implement:<br>developing a dog park finder with additional tools tailored to the convenience of the user group.</p>>
+                <!-- List of reasons for the final decision -->
+                <ul>
+                    <li>Innovative: Compared to other products currently on the market, it provides a smart way to help dog owners enhance their outdoor experience.</li>
+                    <li>Practicality: Help these dog owners find the right dog park to enhance their socialization and outdoor experience.</li>
+                    <li>Technical Feasibility: We believe this project is feasible given the skills and resources of our team.</li>
+                </ul>
+                <!-- Heading for Project Proposal section -->
+                <h2 class="heading-style">Project Proposal</h2>
+                <div class="proposaltext">
+                    <p>
+                        After we had all our ideas and content crystallized, I began the main storyboarding process, which focused on describing our user base. 
+                        According to the design theory mentioned in the International Journal of Design (2007), the concise design of the storyboard helps to depict and convey detailed information more clearly, especially in relation to user interaction and experience. 
+                        This storyboard was created in conjunction with a promotional strategy. Our goal is not just to show what users can do after visiting our website. 
+                        It is more important to explain how users can use our features effectively. This is a key element mentioned in Human-Computer Interaction (1985) - clearly showing how the product meets user needs and guiding the user through the process. We use storyboards to write possible user stories, which are based on user personas built by team members and are designed to demonstrate and promote the functionality and usage scenarios of the product. Our storyboards are more than promotional materials; they are tools based on research and user empirical data to deepen user understanding, improve product design, and enhance user experience. We ensure that promotional materials are not only visually appealing but also accurately convey the value of our website in order to better describe our target user base.
+                    </p>
+                </div>
+                <div class="carousel">
+                    <!-- Images for the storyboard carousel -->
+                    <img src="pic/ppt1.png" class="carousel-image">
+                    <img src="pic/ppt2.png" class="carousel-image">
+                    <img src="pic/ppt3.png" class="carousel-image">
+                    <button class="leftArrow">←</button>
+                    <button class="rightArrow">→</button>
+                </div>
+            </div>
+            <button class="togglePosterBtn">Read More</button>
+            <div class="hiddenContent">
+                <!-- Heading for Reflection on Part A section -->
+                <h2 class="heading-style">Reflection on Part A</h2>
+                <div class="disContent">
+               <p>When reflecting on the successes of Part A, we must also acknowledge that there are areas for improvement. Although we established a solid foundation for the project and developed a detailed design and development plan, feedback from our mentor prompted us to dig deeper and analyze the data to enrich our research base. As the Project Management Journal (1998) suggests, project success lies not only in the clarity of the plan but also in the depth and breadth of the data analysis behind it. In the next phase, we will focus on enhancing the accuracy of decision-making and better understanding user needs and market dynamics through in-depth data mining.</p>
+               <p>For critical reflection on teamwork, we recognized that although task decomposition improves work efficiency, the process of team communication and decision-making still needs to be optimized. Referring to the interdisciplinary teamwork model mentioned in the International Design Journal (2007), we need to establish a more efficient and open communication mechanism within the team. This will not only promote information sharing and idea collision among team members, but also help improve the team's collective understanding of problems and problem-solving capabilities.</p>
+               <p>Finally, when formulating reporting and presentation strategies, we should also adopt a more active strategy, as proposed in the International Journal of Technology and Design Education (1990), to optimize our expression and content through continuous interaction and feedback mechanisms. We will work to create a more inclusive environment where team members are encouraged to come up with creative ideas and provide real-time feedback at all stages of a project. This way we ensure that every aspect of the project is fully thought through and evaluated, resulting in a high-quality outcome.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Part B section -->
+<!-- Project Part B section -->
+<section id="phase-b">
+    <div class="mvp-description">
+        <!-- Title for Part B section -->
+        <h3>Part B </h3>
+        <!-- Description of personal role and responsibilities in the MVP phase -->
+        <p>My main responsibility in MVP is web code development. We completed the implementation of basic functions and basic interactions during the MVP stage and achieved certain success.</p>
+        <!-- Heading for MVP website description -->
+        <h2 class="heading-style">MVP search(index) website</h2>
+        <div class="image-grid">
+            <!-- Images of the MVP website with click functionality -->
+            <img src="pic/mvpwebsite0.png" alt="MVP index" onclick="openLightbox(); setCurrentImage(0)">
+            <img src="pic/MVPwebsite.png" alt="MVP index" onclick="openLightbox(); setCurrentImage(1)">
+            <img src="pic/mvpwebsite3.png" alt="MVP index" onclick="openLightbox(); setCurrentImage(2)">
+        </div>
+        <!-- Prompt to click on images to enlarge -->
+        <p>Click on image to enlarge</p>
+        <!-- Lightbox for image enlargement -->
+         <!-- This lightboxdisplay (1. lightboxdisplay) has been adapted and compared based on its functionality.(https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox)
+            Its unique features include large image,  I changed it to use html js css to large the image. -->
+        <div id="lightboxdisplay" onclick="closeLightbox()">
+            <img id="lightboximage"> 
+        </div>
+        <!-- End code snippet (1. lightboxdisplay) -->
+        <!-- Heading for MVP description -->
+        <h2 class="heading-style">MVP description</h2>
+        <div class="project-overview">
+           
+            <div class="image-stack">
+                <!-- Images illustrating the MVP development -->
+                <img src="pic/mvp function.png" alt="Image 1" id="firstImage">
+                <img src="pic/mvp plan.png" alt="Image 2" id="secondImage">
+            </div>
+            <!-- List of MVP development details -->
+            <ul>
+                <li>Visual layout of the project: The UI design was basically realized, but some effects and layout were not realized.</li>
+                <li>Page responsiveness: Compatibility with computers and mobile phones has been considered, but some features such as filtering and facilities pages failed to consider page compatibility.</li>
+                <li>API calls and main interactive features: Main functions such as API calls, search, filtering, and Google map display have been made. In addition, peripheral searches, forums, popular recommendations, etc. were not made due to time constraints.</li>
+            </ul>
+        </div>
+        <!-- Heading for MVP development process -->
+        <h2 class="heading-style">MVP development process</h2>
+        <div class="project-contribution">
+            <div class="image-stack">
+                <!-- Images illustrating the MVP development process -->
+                <img src="pic/website1.png" alt="Image 1" id="firstImage">
+                <img src="pic/website2.png" alt="Image 2" id="secondImage">
+            </div>
+            <p>
+                I take the lead in bringing our visual layout concepts to real. Although we faced challenges in implementing certain effects and layout elements, I ensured effective execution of the main UI.
+                Responsive Design: Understanding the different devices my audience may be using, I focused on ensuring computer and mobile compatibility. While some specific features, such as filtering and facilities pages, have limitations in terms of responsiveness, I go to great lengths to ensure that much of our website provides a seamless experience across devices.
+                API Integration: I took the lead on integrating the API calls for our platform, ensuring that locators could obtain and display real-time information about the dog park.
+                Search and filtering: I developed the search functionality to allow users to easily find parks based on their preferences. Although filtering is integrated, we faced challenges in scaling it due to time constraints.
+                Google Maps Display: Recognizing the importance of visual aids, I integrated Google Maps Display into our platform. This ensures that users can visually find parks and understand their exact location.
+                Time Management: Considering our timeline, I have to make strategic decisions regarding feature implementation. While I successfully implemented the core functionality, some aspects such as peripheral searches, forums, and top recommendations had to remain. These are the challenges I have identified for future iterations of our project.
+                Through the development process, I learned the importance of MVP prioritizing features and look forward to enhancing our platform based on user feedback and needs.
+            </p>
+        </div>
+        <!-- Response to feedback received on the project -->
+        <div class="feedback-response">
+            <h2 class="feedback-response-header">Response to Feedback on MVP Project</h2>
+            <p>Firstly, I'd like to thank everyone and staff for the comprehensive feedback we received on our project. Addressing the specific points raised:</p>
+            <p class="feedback-highlight">Objectives in Relation to Interaction Plan:</p>
+            <p>I learned the importance of aligning our goals with the interaction plan. As emphasized by the authoritative publication on human-computer interaction (Human-computer interaction, 1985), the close relationship between clear goals and user experience is the key to successful design. So, going forward, we will ensure that these elements are tightly integrated so that our goals are clear in the user interactions we are pursuing.</p>
+            <p class="feedback-highlight">Success Criteria and Measurement:</p>
+            <p>In the new version of our success criteria for the "Dog Park Locator" platform, we've adopted the SMART principle to clearly define and measure our platform's success. Our focus has been to provide a clear vision, detailed KPIs, actionable strategies, user-centric relevance, and a timely roadmap. Our success criteria, supported by academic research, have become more structured, feasible, and clear. Key performance indicators (KPIs) to measure results and effects. Only with clear and measurable performance indicators can we better evaluate the status and progress of the project(Kaplan & Norton, 1996). </p>
+            <p class="feedback-highlight">Comprehensive Interaction Plan:</p>
+            <ul class="feedback-details">
+                <li><strong>Design Factors:</strong> We'll ensure to focus on Structure, Mapping, Orientation, Visibility, Feedback, Error prevention, Language, and Consistency. This comprehensive approach will make our product more intuitive and user-centric.</li>
+                <li><strong>Technical Details:</strong> As the lead developer, I'll document the specific tools and technologies we're using. This includes listing out the API datasets, and naming specific HTML/CSS/JS/PHP snippets.</li>
+                <li><strong>Learning and Skill Acquisition:</strong> We understand the value of continuous learning. To address specific design or development needs, our team is ready to undergo training and practice.</li>
+                <li><strong>Task Allocation:</strong> This is crucial for efficient development. I'll ensure to keep a clear allocation of who's responsible for every piece of code and styling. This clarity will help in timely delivery and efficient debugging.</li>
+            </ul>
+        </div>
+        <!-- Button to toggle hidden content -->
+        <button class="togglePosterBtn">Read More</button>
+        <div class="hiddenContent">
+            <!-- Reflection on Part B section -->
+            <h2 class="heading-style">Reflection on Part B</h2>
+            <p> In the feedback after completing the MVP stage, I became acutely aware of the shortcomings of Part B in terms of goal clarity and relevance to the engagement plan. Feedback pointed to a lack of clear connections between our team’s project goals and actual user engagement strategies, which resulted in vague and unspecific success criteria. Such feedback becomes the starting point for our team to self-examine and improve.</p>
+            <p> We were advised to refine the relationship to the user engagement strategy in the project goals and to refine the success criteria through in-depth analysis of academic research and user testing. This top-down thinking leads to a deeper understanding of how project success is measured. For example, we might use data analysis or user interviews to determine whether success criteria are being met.</p>
+            <p> The feedback part of interaction design is particularly critical. We are reminded to consider more carefully factors in product design such as structure, mapping, directionality, visibility, feedback, error prevention, and language consistency, and to reflect on how to implement these principles. For example, we will clearly list and explain the selection of API datasets, the use of HTML/CSS/JS/PHP code snippets, and the techniques you need to learn to achieve these design goals.</p>
+            <p> After deep reflection and detailed analysis, we recognized multiple potential points of improvement in project planning and execution. In order to more accurately meet the needs and expectations of users, we have started a comprehensive action plan revision for MVP. We will reframe the project goals to ensure they are tightly aligned with the user engagement strategy, and use user research to define clear and measurable success criteria. According to the International Journal of Technology and Design Education (1990), successful product design requires not only clear structure and mapping, but also a deep understanding of users' learning processes and skill acquisition. Our team will take steps to evaluate our design decisions against these standards and ensure our products are optimized through ongoing user testing. In addition, we will establish a comprehensive evaluation mechanism that includes user interviews and website analysis to ensure that we can effectively track and achieve these standards.</p>
+            <p> I will work to develop an understanding of interaction design principles, including structure, mapping, directionality, visibility, feedback, error prevention, and language consistency, and integrate these principles into product design. Through this series of closely connected initiatives, I am confident that I will lead the team to continue to optimize our MVP and create a comprehensive, user-friendly product that truly meets the needs of the target user group.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section describing the final phase of the project, Part C -->
+<section id="phase-c">
+    <!-- Title for the Part C section -->
+    <h3>Part C</h3>
+    <div class="project-deliverables">
+        <!-- Heading for the section on Final Stage Overview and Contribution -->
+        <h2 class="heading-style">Overview and Contribution</h2>
+        <!-- List of project deliverables -->
+        <ul>
+            <li>Completed web application.</li>
+            <li>Trade show presentation and speech.</li>
+            <li>Complete development of all web page functions.</li>
+            <li>Improved styling and user interface.</li>
+            <li>Produce promotional materials and design reports.</li>
+        </ul>
+        <!-- Heading for the main changes implemented in the final product -->
+        <h2 class="heading-style">Main Function Changes</h2>
+        <!-- Comparison of website before and after changes -->
+        <div class="comparison-container">
+            <!-- Images illustrating website changes with click functionality -->
+            <div class="before">
+                <img src="pic/website1.png" alt="Previous Version" onclick="openLightbox(); setCurrentImage(0);">
+                <p>Before</p>
+            </div>
+            <div class="arrow">
+                <span class="emoji-arrow">➡️</span>
+            </div>
+            <div class="after">
+                <img src="pic/website3.png" alt="Updated Version" onclick="openLightbox(); setCurrentImage(1);">
+                <p>After</p>
+            </div>
+        </div>
+        <!-- Description of the first major change -->
+        <p class="feedback-description">
+            After getting feedback from Part B, our group brainstormed some new ideas through discussion and brainstorming. We decided to adjust the interactivity and UI of the feature. Based on feedback, we have made the search function capable of inputting the region name and postcode. The results of our search can be displayed on the map. Users can click on the map to view dog park location information and detailed park facility pages.
+        </p>
+        <!-- Comparison of website before and after the second change -->
+        <div class="comparison-container">
+            <!-- Images illustrating website changes with click functionality -->
+            <div class="before">
+                <img src="pic/website1.png" alt="Previous Version" onclick="openLightbox(); setCurrentImage(0);">
+                <p>Before</p>
+            </div>
+            <div class="arrow">
+                <span class="emoji-arrow">➡️</span>
+            </div>
+            <div class="after">
+                <img src="pic/website4.png" alt="Updated Version" onclick="openLightbox(); setCurrentImage(1);">
+                <p>After</p>
+            </div>
+        </div>
+        <!-- Description of the second major change -->
+        <p class="feedback-description">
+            The second major change we made was the decision to turn park features into detail pages. We use the objectId of the API as a parameter to display the park information separately. This can perfectly display the detailed information and content of the park and help users obtain information more easily.
+        </p>
+        <!-- Heading for the section on Final Stage New Function -->
+        <h2 class="heading-style">New Function</h2>
+        <!-- List of new features in the final product -->
+        <p class="feature-list">
+            New features in the final product include:
+
+            <ul>
+                <li><strong>Park Interest Counter & Popular Park Recommendation:</strong> Shows user interest in parks and recommends popular parks.</li>
+                <li><strong>Cartoon Icons in Map Mode:</strong> Dog and bone icons represent user and park locations.</li>
+                <li><strong>Forum Feature:</strong> A space for users to discuss dog-related topics.</li>
+                <li><strong>Search Nearby Restaurants:</strong> Get location to nearby eateries from the park's page.</li>
+            </ul>
+        </p>
+        <!-- Heading for the section on Code challenges -->
+        <h2 class="heading-style">Code challenges</h2>
+        <!-- Google API Address Supplementary Search code section -->
+        <div class="code-container">
+            <h2 class="code-title">Google API Address Supplementary Search</h2>
+            <!-- Screenshots of the code -->
+            <div class="img-wrapper">
+                <div class="img-container">
+                    <img src="pic/code3.png" alt="Code Screenshot" class="code-image">
+                    <img src="pic/code1.png" alt="Code Screenshot" class="code-image">
+                    <img src="pic/code2.png" alt="Code Screenshot" class="code-image">
+                </div>
+            </div>
+            <!-- Difficulty level label -->
+            <span class="difficulty-label medium">Higher Difficulty</span>
+            <!-- Description of the Google API Address Supplementary Search code -->
+            <div class="code-description">
+                <p>
+                    This code segment enables users to input suburban names or area numbers, which are then processed by Google's API. A major challenge faced was the discrepancy between regional names provided by Google and the suburb names in the government API. The goal was to align Google's outputs with the government API's data, allowing users to accurately fetch and link information.
+                </p>
+                
+                <!-- Challenges and solutions for the code segment -->
+                <p><strong>Challenges:</strong></p>
+                <ul>
+                    <li>Mismatches in suburb naming conventions between Google's API and the government's API.</li>
+                    <li>Google returning names in lowercase or different languages based on browser settings.</li>
+                </ul>
+                
+                <p><strong>Solutions:</strong></p>
+                <ul>
+                    <li>Utilized PHP's "strtoupper" function to convert suburb names to uppercase.</li>
+                    <li>Specified English ('language': 'en') as the default query language for consistent results.</li>
+                    <li>I hope future improvements include direct querying by entering the user's address and adding more error reminder mechanisms.</li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <!-- Interest count of the Park page code section -->
+        <div class="code-container">
+            <h2 class="code-title">Interest count of the Park page cannot be refreshed on time.</h2>
+            <!-- Screenshots of the code -->
+            <div class="img-wrapper">
+                <div class="img-container">
+                    <img src="pic/code4.png" alt="Code Screenshot" class="code-image">
+                    <img src="pic/code5.png" alt="Code Screenshot" class="code-image">
+                    <img src="pic/code6.png" alt="Code Screenshot" class="code-image">
+                </div>
+            </div>
+            <!-- Difficulty level label -->
+            <span class="difficulty-label medium">Higher Difficulty</span>
+            <div class="code-description">
+                <p>
+                    This code segment allows users to express their interest in a park by clicking the "interest" button. The major challenge faced was the inability to refresh the interest count on the Park page in real time. After clicking, the server updates the interest count, but the count only gets displayed on the page after refreshing.
+                </p>
+                
+                <!-- Challenges and solutions for the code segment -->
+                <p>
+                    <strong>Challenges:</strong>
+                </p>
+                <ul>
+                    <li>Interest count not updating on the Park page in real time after a user clicks the "interest" button.</li>
+                    <li>Previous coding only sent a POST request to the server but did not update the page immediately.</li>
+                </ul>
+                <p>
+                    <strong>Solutions:</strong>
+                </p>
+                <ul>
+                    <li>Modified the development strategy to extract the ID and name of the park from the nearest park card when the button is clicked.</li>
+                    <li>Added data validation and error handling for more robust and secure functionality.</li>
+                    <li>Future plans include using real-time communication technology for establishing a persistent connection between the front-end and the server. This will allow instant updates when the data on the server side changes.</li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <!-- Heading for the section on Final Stage Tradeshow -->
+        <h2 class="heading-style">Tradeshow</h2>
+        <!-- Description of the Tradeshow experience -->
+        <div class="tradeshow-highlight">
+            <!-- Images related to the Tradeshow -->
+            <img src="pic/tradeshow.jpg" alt="trade show">
+            <img src="pic/tradeshow2.jpg" alt="Team photo">
+            <!-- Details about the Tradeshow experience -->
+            <p>Before the exhibition, one of the classmates in our group dropped the course two hours before the tradeshow, which caused some minor confusion among us. But we have worked hard to overcome it and continue to prepare our content. During the show, users had a very positive experience when trying our products. Many users are attracted by the friendly design and powerful functionality of our pages.</p>
+            <p>Although our primary user base is pet owners, many of our course peers expressed shock at the display of our powerful information resources at the show. Some users have expressed curiosity about our Google search and want to know what technology or API is used behind it. They were surprised by the accurate complement of searches in our project and the quick presentation of results.</p>
+        </div>
+        <!-- Heading for the section on Final Stage Website Outcomes -->
+        <h2 class="heading-style">Final Website</h2>
+        <!-- Description and screenshots of the final website -->
+        <div class="demo-highlight">
+            <div class="carousel">
+                <!-- Screenshots of the final website -->
+                <img src="pic/demo1.png" class="carousel-image">
+                <img src="pic/demo2.png" class="carousel-image">
+                <img src="pic/demo3.png" class="carousel-image">
+                <img src="pic/demo4.png" class="carousel-image">
+                <img src="pic/demo5.png" class="carousel-image">
+                <img src="pic/demo6.png" class="carousel-image">
+                <img src="pic/demo7.png" class="carousel-image">
+                <img src="pic/demo8.png" class="carousel-image">
+                <img src="pic/demo9.png" class="carousel-image">
+                <img src="pic/demo10.png" class="carousel-image">
+                <!-- Buttons for navigating carousel -->
+                <button class="leftArrow">←</button>
+                <button class="rightArrow">→</button>
+            </div>
+            <!-- Description and link to the final website -->
+            <p>Some screenshots of the final website demo can be seen, or you can visit the site:</p>
+            <p>https://deco1800teams-stu01t11cyberseekers.uqcloud.net/</p>
+        </div>
+        <!-- Button to toggle hidden content -->
+        <button class="togglePosterBtn">Read More</button>
+        <!-- Hidden section that contains reflections on Part C of the project -->
+        <div class="hiddenContent">
+            <h2 class="heading-style">Reflection on Part C</h2>
+            <!-- Reflection on the success of Part C and challenges faced -->
+            <div class="partc-reflect">
+            <p>We feel very successful with the outcome of Part C. We completed most of the planned functionality and are happy with the final visual aesthetic. There are still some functions that have not been completed due to development time and cycle. We hope to improve them in future studies.
+                Trade Show Experience: Due to one of our group members temporarily withdrawing from the course two hours before the trade show. We encountered some challenges in our presentations at trade shows. But we try our best to complete this challenge. Other peers who listened to our reports and presentations expressed high interest in our products. </p>
+            <p>
+                During the development process, I deeply realized the strong correlation between technology realization and user experience. Using Google API to assist users in address search really brings great convenience to the project. 
+                However, the data mismatch with the government API made me realize that when integrating APIs, we should not only consider technical issues, but also pay attention to the differences between data.
+                 Especially when it comes to the query of users' key information, any data deviation may lead to the decline of users' clarity or understanding ability. Secondly, although the function of the "interest" button can be said to be realized at the technical level, the user experience is obviously affected. 
+                 Interest count will not be updated in real time, which may give users the illusion that the system does not record their behavior. This tells me that sometimes there is a gap between technical realization and user feedback, and this gap will affect the acceptance of the overall product. Those two challenges made me realize that development needs more than pure technical realization. Development requires more than purely technical implementation. We also need to think more from the user's perspective to ensure their experience is smooth and enjoyable (Fleury & Chaniaud, 2023). We also need to think more from the user's point of view to ensure that their experience is smooth and enjoyable.
+            </p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio section -->
+<section id="portfolio">
+    <!-- Title for the Portfolio section -->
+    <h3>Portfolio</h3>
+    <!-- Container for portfolio content -->
+    <div class="portfolio-ideation">
+        <!-- Container for the research and ideation process -->
+        <div class="research-ideation">
+            <!-- Heading for the Research and Ideation section -->
+            <h2 class="heading-style">Research and Ideation</h2>
+            <ul>
+                <li>This is my first portfolio website, so I first researched the topic and thought about the points I should focus on and cover.</li>
+                <li>Then I started sketching out some ideas for page layout and some navigation options.</li>
+                <li>This relatively simple website seemed like the perfect place to showcase my portfolio.</li>
+            </ul>
+            <div class="image-wrapper">
+                <img src="pic/layout.jpg" alt="Screenshot" class="resized-image">
+            </div>
+            
+        </div>
+        
+        <!-- Container for the execution phase details -->
+        <div class="execution">
+            <!-- Heading for the Execution phase -->
+            <h2 class="heading-style">Layout</h2>
+            <ul>
+                <li>Layout is probably one of the most important parts of a portfolio website. I created the HTML and added some real content, and I was constantly testing what I was designing.</li>
+                <li>Then I started adding CSS that would allow the site to fall into an easy-to-read and focused layout.</li>
+            </ul>
+        </div>
+         <!-- Description and screenshots of the Portfolio website -->
+         <div class="demo-highlight">
+            <div class="carousel">
+                <!-- Screenshots of the Portfolio website -->
+                <img src="pic/final (1).png" class="carousel-image">
+                <img src="pic/final (2).png" class="carousel-image">
+                <img src="pic/final (3).png" class="carousel-image">
+                <img src="pic/final (4).png" class="carousel-image">
+                <img src="pic/final (5).png" class="carousel-image">
+                <img src="pic/final (6).png" class="carousel-image">
+                <img src="pic/final (7).png" class="carousel-image">
+                <img src="pic/final (8).png" class="carousel-image">
+                <img src="pic/final (9).png" class="carousel-image">
+                <!-- Buttons for navigating carousel -->
+                <button class="leftArrow">←</button>
+                <button class="rightArrow">→</button>
+            </div>
+      
+        <!-- Container for reflection on the project -->
+        <div class="reflection">
+            <!-- Heading for the Reflection section -->
+            <h2 class="heading-style">Reflection</h2>
+            <p>Overall, I believe this portfolio turned out well. I am very happy with the final form of the website and the process has been a rich learning experience. My portfolio content is clearly presented and the website effectively captures and communicates the simplicity of my designs. The only thing I haven't considered is designing it to be mobile friendly, I need to consider improving accessibility in future development. I learned a lot from the deco7180 group project and creating this portfolio gave me the opportunity to reflect on this and think about my shortcomings.</p>
+        </div>
+      
+    </div>
+</section>
+
+
+<!-- Course Reflection section -->
+<section id="course-reflection">
+   <!-- Title for the Course Reflection section -->
+    <h3>Course Reflection</h3>
+    <!-- Container for the final reflection content -->
+    <div class="final-reflection">
+        <!-- Stack of images related to the course reflection -->
+        <div class="image-stack">
+            <!-- First image in the stack with alt text describing the image -->
+            <img src="pic/team.jpg" alt="Team working together" id="firstImage">
+            <!-- Second image in the stack with alt text describing the image -->
+            <img src="pic/team2.jpg" alt="Team collaboration" id="secondImage">
+        </div>
+        <!-- Reflection content -->
+        <p><strong>Description:</strong> This semester, I studied the DECO7180 course. As part of the course project, I led a web-based project to create a service for dog owners in Brisbane to find dog parks. My responsibilities included coding the entire website, integrating the API, and ensuring the final product adhered to our original concept. This experience is a hands-on experience, with the entire project designed, prototyped, coded, and developed in class studios and small groups. I primarily do coding and interact with the team for ideation, feedback, and project planning. We built a fully functional website that caters to the needs of Brisbane dog owners, including features such as park interest levels and community engagement forums. My goal is to develop a robust and user-friendly website that meets the specific needs and expectations of my target audience.</p>
+        <p><strong>Feelings:</strong> Throughout the entire project, I had a lot of emotional ups and downs. At the beginning of the project, I was excited about being able to turn an idea into a reality; during the MVP stage, I felt anxious and stressed due to poor feedback. I was disappointed, and I hope to meet and reach the final requirements through continuous improvement. Our team members worked hard together to modify and improve the project. In the end, it was very satisfying to see the positive response from users to our finished product.</p>
+        <p><strong>Evaluation:</strong> This project allowed me to learn a lot about coding and UX design. I learned more about front-end and back-end development and usage. However, the lack of more coding practices helped create a challenging workload. The development and integration of core functionality in our project are progressing smoothly and has received positive feedback from users. In the team, I mainly do coding tasks, which is a relatively heavy workload for me. It is difficult for teams to balance feature complexity. Initial responsiveness and integration of some features also presented challenges. My coding skills are actively contributed, and the team has many people involved in the technical process at the same time to distribute the workload more evenly.</p>
+        <p><strong>Analysis:</strong> As my team and I work, an iterative approach based on feedback and test results helps shape a product that resonates well with end users. Our team's collaboration and decision-making process showed maturity from ideation to implementation. Technical challenges such as API integration, database optimization, and responsive design of the front-end are solved through teamwork. For every problem in the project, we found a solution through research and cooperation. The technology and collaboration experience learned in this process are extremely valuable. This experience highlights the importance of teamwork in development projects and the need for appropriate resource allocation.</p>
+        <p><strong>Conclusion:</strong> This project taught me that a good team leader should not only lead the way but also provide stability and confidence when the team encounters challenges. I learned technical skills and how to manage a team and deal with stress and uncertainty. Positive feedback from users also confirms the value of our efforts. I need to develop more vital project management and delegation skills, as well as advanced coding skills, to handle complex situations more effectively.</p>
+        <p><strong>Action Plan:</strong> In the future, I plan to integrate user feedback into product development earlier so that we can adjust and optimize our products faster. I would stick with a more collaborative approach, get help for complex coding tasks, and use project management tools to better track progress and distribute work. I will also continue to improve my technical skills, particularly in front-end development and user experience design, to be able to create more intuitive and engaging products. At the same time, I will strengthen my leadership and team management skills to ensure that the team's morale and productivity can be maintained even when the team faces difficulties. I will also advocate for regular team check-ins on future projects to ensure workload balance and collective problem-solving.</p>
+    </div>
+</section>
+
+
+<!-- Reference section contains a list of texts and publications -->
+<section id="Reference">
+    <div class="reference-section">
+        <h3>References</h3>
+        <ul class="reference-list">
+
+            <li class="reference-item">
+            Eberhard Grossgasteiger (2013). Snowy Mountain, https://www.pexels.com/photo/snowy-mountain-1287145/
+            </li>
+
+            <li class="reference-item">
+                Emojipedia. (n.d.). Arrow Emoji. Retrieved November 4, 2023, from <a href="https://emojipedia.org/right-arrow/" target="_blank">https://emojipedia.org/right-arrow/</a>
+            </li>
+            <li class="reference-item">
+                Fleury, S., & Chaniaud, N. (2023). Multi-user centered design: acceptance, user experience, user research and user testing. Theoretical Issues in Ergonomics Science. <a href="https://doi.org/10.1080/1463922X.2023.2166623" target="_blank">https://doi.org/10.1080/1463922X.2023.2166623</a>
+            </li>
+            <li class="reference-item">
+                Human-Computer Interaction. (1985). L. Erlbaum Associates.
+            </li>
+            <li class="reference-item">
+                International Journal of Design. (2007). Graduate Institute of Design, National Taiwan University of Science and Technology.
+            </li>
+            <li class="reference-item">
+                International Journal of Technology and Design Education. (1990). Kluwer Academic Publishers.
+            </li>
+            <li class="reference-item">
+                Kaplan, R., & Norton, D. (1996). Using the balanced scorecard as a strategic management system. Harvard Business Review, 74(1), 75–85.
+            </li>
+            <li class="reference-item">
+                Project Management Journal. (1998). Project Management Institute.
+            </li>
+            <li class="reference-item">
+                W3Schools. (n.d.). How To Create a Lightbox. Retrieved November 4, 2023, from <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox" target="_blank">https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox</a>
+            </li>
+        </ul>        
+    </div>
+</section>
+
+</main>
+
+<script>
+
+// Function to initialize a carousel component
+function initCarousel(carouselElement) {
+    // Start with the first image in the carousel
+    let currentIndex = 0;
+    // Select all images within the carousel element
+    const images = carouselElement.querySelectorAll('.carousel-image');
+    
+    // Function to display the image at a given index and hide all others
+    function showImage(index) {
+        images.forEach((img, idx) => {
+            img.style.display = idx === index ? 'block' : 'none';
+        });
+    }
+    
+    // Select the navigation arrows within the carousel element
+    const leftArrow = carouselElement.querySelector('.leftArrow');
+    const rightArrow = carouselElement.querySelector('.rightArrow');
+
+    // Add click event listener to the left arrow to navigate to the previous image
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Add click event listener to the right arrow to navigate to the next image
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Initially display the first image
+    showImage(currentIndex);
+}
+
+// Initialize the carousel for each element with the class 'carousel'
+document.querySelectorAll('.carousel').forEach(initCarousel);
+
+// Add smooth scrolling behavior to sidebar links
+document.querySelectorAll('.sidebar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default anchor link behavior
+        // Scroll smoothly to the element that has the ID that matches the href of the link
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Event listener to execute once the DOM content is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all toggle buttons for posters
+    var toggleButtons = document.querySelectorAll('.togglePosterBtn');
+
+    // Add a click event listener to each toggle button
+    toggleButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Find the poster content related to the button
+            var content = this.nextElementSibling;
+
+            // Toggle the display of the poster content and button text
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                this.innerHTML = "Read Less";
+            } else {
+                content.style.display = "none";
+                this.innerHTML = "Read More";
+            }
+        });
+    });
+});
+
+// This lightboxdisplay (1. lightboxdisplay) has been adapted and compared based on its functionality.(https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox) 
+//Its unique features include large image,  I changed it to use html js css to large the image.
+// Function to open the lightbox overlay
+function openLightbox() {
+    // Set the display style to flex to make it visible
+    document.getElementById('lightboxdisplay').style.display = 'flex';
+}
+
+// Function to close the lightbox overlay
+function closeLightbox() {
+    // Hide the lightbox by setting the display to none
+    document.getElementById('lightboxdisplay').style.display = 'none';
+}
+
+// Function to set the current image to be displayed in the lightbox
+function setCurrentImage(index) {
+    // Select all images from the image grid
+    var images = document.querySelectorAll('.image-grid img');
+    // Set the source of the lightbox image to the source of the selected image
+    document.getElementById('lightboximage').src = images[index].src;
+}
+// End code snippet (1. lightboxdisplay)
+
+</script>
+ 
+</body>
+</html>
