@@ -58,12 +58,21 @@ Thank you so much for your help and insights and I look forward to working with 
 
 
 ## References
-# Eberhard Grossgasteiger (2013). Snowy Mountain, https://www.pexels.com/photo/snowy-mountain-1287145/
-# Emojipedia. (n.d.). Arrow Emoji. Retrieved November 4, 2023, from https://emojipedia.org/right-arrow/
-# Fleury, S., & Chaniaud, N. (2023). Multi-user centered design: acceptance, user experience, user research and user testing. Theoretical Issues in Ergonomics Science. https://doi.org/10.1080/1463922X.2023.2166623
-# Human-Computer Interaction. (1985). L. Erlbaum Associates.
-# International Journal of Design. (2007). Graduate Institute of Design, National Taiwan University of Science and Technology.
-# International Journal of Technology and Design Education. (1990). Kluwer Academic Publishers.
-# Kaplan, R., & Norton, D. (1996). Using the balanced scorecard as a strategic management system. Harvard Business Review, 74(1), 75–85.
-# Project Management Journal. (1998). Project Management Institute.
-# W3Schools. (n.d.). How To Create a Lightbox. Retrieved November 4, 2023, from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox
+
+Eberhard Grossgasteiger (2013). Snowy Mountain, https://www.pexels.com/photo/snowy-mountain-1287145/
+
+Emojipedia. (n.d.). Arrow Emoji. Retrieved November 4, 2023, from https://emojipedia.org/right-arrow/
+
+Fleury, S., & Chaniaud, N. (2023). Multi-user centered design: acceptance, user experience, user research and user testing. Theoretical Issues in Ergonomics Science. https://doi.org/10.1080/1463922X.2023.2166623
+
+Human-Computer Interaction. (1985). L. Erlbaum Associates.
+
+International Journal of Design. (2007). Graduate Institute of Design, National Taiwan University of Science and Technology.
+
+International Journal of Technology and Design Education. (1990). Kluwer Academic Publishers.
+
+Kaplan, R., & Norton, D. (1996). Using the balanced scorecard as a strategic management system. Harvard Business Review, 74(1), 75–85.
+
+Project Management Journal. (1998). Project Management Institute.
+
+W3Schools. (n.d.). How To Create a Lightbox. Retrieved November 4, 2023, from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox
